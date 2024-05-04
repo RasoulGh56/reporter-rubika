@@ -1,16 +1,19 @@
-try:import os,pyrubi
+import os,platform
+
+def Cl():
+	if platform.uname()[0] == "Windows":os.system("cls")
+	else:os.system("clear")
+	
+Cl()
+
+try:import pyrubi
 except:os.system("pip install pyrubi")
 try:import pyfiglet
 except:os.system("pip install pyfiglet")
 try:import colorama
 except:os.system("pip install colorama")
 
-import pyrubi,platform,pyfiglet,colorama,time
-
-def Cl():
-	if platform.uname()[0] == "Windows":os.system("cls")
-	else:os.system("clear")
-
+import pyrubi,pyfiglet,colorama,time
 
 bot = pyrubi.Client("P-D99999")
 font = pyfiglet.Figlet()
